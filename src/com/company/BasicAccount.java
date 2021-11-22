@@ -4,9 +4,9 @@ public class BasicAccount extends StandardAccount {
 
     protected double withdrawlLimit;
 
-    public BasicAccount(int accountNumber, double withdrawlLimit ) {
+    public BasicAccount(int accountNumber, double withdrawlLimit) {
 
-        super(accountNumber,0);
+        super(accountNumber, 0);
 
         this.withdrawlLimit = withdrawlLimit;
 
@@ -16,15 +16,15 @@ public class BasicAccount extends StandardAccount {
     @Override
     public double Withdraw(double amount) {
 
-
-        if (amount > withdrawlLimit)
+        if (amount > withdrawlLimit) {
 
             balance -= withdrawlLimit;
             return withdrawlLimit;
-        {
-            else
-                balance -= amount;
-                return amount;
+        } else {
+            balance -= amount;
+            return amount;
         }
     }
+}
+
 

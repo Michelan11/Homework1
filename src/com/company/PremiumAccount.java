@@ -6,4 +6,11 @@ public class PremiumAccount extends StandardAccount {
         super(accountNumber,0);
 
     }
+
+    public double Withdraw(double amount) {
+
+        balance -= amount;
+            return amount;
+
+    }
 }

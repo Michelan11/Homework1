@@ -17,29 +17,24 @@ public class StandardAccount implements IAccount {
 
     @Override
     public void Deposit(double amount) {
-        //if (amount > creditLimit);
 
         balance += amount;
     }
 
     @Override
     public double Withdraw(double amount) {
-        if ((amount < creditLimit) && (amount <= balance )
-        {
-            //double withdrawl = balance + (-creditLimit)
-            //return withdrawl;
-            balance -= creditLimit
-                    return balance
-        }
-        {
-        else if (balance == creditLimit) ;
-            return 0;
-        }
-        }
-        else
-        {
-            balance -= creditLimit
-                return balance
+        if (creditLimit > 0) {
+            return creditLimit = 0;
+
+        } else if ((amount > creditLimit) || (amount == creditLimit)){
+
+            balance -= amount;
+                    return amount;
+
+        } else {
+
+            balance -= creditLimit;
+                return creditLimit;
         }
     }
 
