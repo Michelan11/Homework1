@@ -3,12 +3,11 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bank<myList> extends StandardAccount implements IBank {
+public class Bank<myList> implements IBank {
 
     List<IAccount> myList = new ArrayList<IAccount>();
-
     public Bank(int accountNumber, double creditLimit) {
-        super(accountNumber, creditLimit);
+        myList =new ArrayList<IAccount>();
     }
 
     @Override
